@@ -1,0 +1,18 @@
+=========================================================================================
+**Dependence Script**
+*Dynamic*
+*Target*
+=========================================================================================
+**Parte Target**
+[[Target/Client/Core.lua]]
+
+---------------------------------------------------------------------------------------------------
+
+if CheckPolice() or LocalPlayer["state"]["Paramedico"] or LocalPlayer["state"]["Admin"] then
+	local targetPassport = vSERVER.GetTargetPassport(source)			
+	if targetPassport then
+		table.insert(Menu,{ event  = "viewpassport:openTarget", label = "Ver Passaporte", tunnel = "client" })
+	end
+end
+
+----------------------------------------------------------------------------------------------------------------------------
